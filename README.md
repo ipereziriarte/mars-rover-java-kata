@@ -32,7 +32,8 @@ The output for each rover should be its final coordinates and heading. Input and
 ###Test Input:
 + Plateau size: 5x5
 + Rover 1 deploy zone: 1 2 N
-+ Rover 1 movement: LMLMLMLMM Rover 2 deploy zone: 3 3 E
++ Rover 1 movement: LMLMLMLMM 
++ Rover 2 deploy zone: 3 3 E
 + Rover 2 movement: MMRMMRMRRM
 ###Expected Output:
 + Rover 1 position: 1 3 N
