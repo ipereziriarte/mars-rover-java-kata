@@ -1,12 +1,13 @@
 package com.blokura;
 
-import com.blokura.command.RoverCommand;
-import com.blokura.command.RoverCommandCollectionBuilder;
-import com.blokura.command.RoverCommandParser;
+import com.blokura.command.CommandSequenceExecutor;
+import com.blokura.command.rovercommands.RoverCommand;
+import com.blokura.command.rovercommands.RoverCommandCollectionBuilder;
+import com.blokura.command.rovercommands.RoverCommandParser;
 import com.blokura.data.CommandFactory;
 import com.blokura.data.FileReader;
 import com.blokura.data.InputType;
-import com.blokura.data.OutPut;
+import com.blokura.data.ConsoleOutPut;
 import com.blokura.model.Coordinates;
 import com.blokura.model.Plateau;
 import com.blokura.model.Rover;
@@ -28,7 +29,8 @@ public class Main {
         DeployParser deployParser = new DeployParser();
         MovementParser movementParser = new MovementParser();
         RoverCommandParser roverCommandParser = new RoverCommandParser(new RoverCommandCollectionBuilder());
-        OutPut outPut = new OutPut();
+        CommandSequenceExecutor sequenceExecutor = new CommandSequenceExecutor(new ConsoleOutPut());
+        RoverInstructionFactory roverInstructionFactory = new RoverInstructionFactory();
         String path;
         if (args.length == 1) {
             path = args[0];
@@ -57,31 +59,9 @@ public class Main {
                     commandList.add(commands);
                 }
             }
-            Pair<Rover, List<RoverCommand>> roverInstruction;
-            for (int i = 0; i < coordinatesList.size(); i ++) {
-                coordinates = coordinatesList.get(i);
-                int roverId = i + 1;
-                Rover rover = new Rover.RoverBuilder().withPlateau(plateau)
-                    .withCoordinates(coordinates).withId(roverId).build();
-                if (commandList.size() > i) {
-                    List<RoverCommand> com = commandList.get(i);
+            instructions = roverInstructionFactory.make(coordinatesList, commandList, plateau);
 
-                    roverInstruction = new Pair<>(rover, com);
-                    instructions.add(roverInstruction);
-                }
-            }
-
-            for (Pair<Rover, List<RoverCommand>> pair : instructions) {
-                Rover rover = pair.getElement0();
-                List<RoverCommand> execution = pair.getElement1();
-
-                for (RoverCommand command : execution) {
-                    command.execute(rover);
-                }
-                outPut.print(rover);
-
-            }
-
+            sequenceExecutor.execute(instructions);
         } catch (IOException e) {
             e.printStackTrace();
         }

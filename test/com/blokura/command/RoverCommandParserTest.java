@@ -1,5 +1,11 @@
 package com.blokura.command;
 
+import com.blokura.command.rovercommands.MoveCommand;
+import com.blokura.command.rovercommands.RoverCommand;
+import com.blokura.command.rovercommands.RoverCommandCollectionBuilder;
+import com.blokura.command.rovercommands.RoverCommandParser;
+import com.blokura.command.rovercommands.TurnLeftCommand;
+import com.blokura.command.rovercommands.TurnRightCommand;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;

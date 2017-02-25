@@ -1,4 +1,4 @@
-package com.blokura.command;
+package com.blokura.command.rovercommands;
 
 import java.util.ArrayList;
 import java.util.Collections;

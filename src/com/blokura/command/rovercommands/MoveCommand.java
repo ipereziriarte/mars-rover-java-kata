@@ -1,4 +1,4 @@
-package com.blokura.command;
+package com.blokura.command.rovercommands;
 
 import com.blokura.model.Coordinates;
 import com.blokura.model.Heading;

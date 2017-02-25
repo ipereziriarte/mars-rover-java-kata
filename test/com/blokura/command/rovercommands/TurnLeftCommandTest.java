@@ -1,5 +1,7 @@
-package com.blokura.command;
+package com.blokura.command.rovercommands;
 
+import com.blokura.command.rovercommands.RoverCommand;
+import com.blokura.command.rovercommands.TurnLeftCommand;
 import com.blokura.model.Coordinates;
 import com.blokura.model.Heading;
 import com.blokura.model.Rover;
