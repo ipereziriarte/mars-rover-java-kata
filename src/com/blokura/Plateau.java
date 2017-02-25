@@ -8,12 +8,12 @@ public class Plateau {
     private static final int ORIGIN_X = 0;
     private static final int ORIGIN_Y = 0;
 
-    private final int height;
     private final int width;
+    private final int height;
 
-    public Plateau(int height, int width) {
-        this.height = height;
+    public Plateau(int width, int height) {
         this.width = width;
+        this.height = height;
     }
 
     public boolean includes(int x, int y) {
@@ -44,7 +44,7 @@ public class Plateau {
         }
 
         public Plateau build(){
-            return new Plateau(height, width);
+            return new Plateau(width, height);
         }
 
     }
