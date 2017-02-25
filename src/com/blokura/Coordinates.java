@@ -39,4 +39,9 @@ public class Coordinates {
     public void setHeading(Heading heading) {
         this.heading = heading;
     }
+
+    @Override
+    public String toString() {
+        return x + " " + y + " " + heading.name();
+    }
 }
