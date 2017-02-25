@@ -28,4 +28,9 @@ public class TurnLeftCommand implements RoverCommand {
                 return coordinates.getHeading();
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && obj instanceof TurnLeftCommand;
+    }
 }

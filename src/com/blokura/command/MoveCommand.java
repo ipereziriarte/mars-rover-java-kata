@@ -60,4 +60,9 @@ public class MoveCommand implements RoverCommand {
                 return y;
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && obj instanceof MoveCommand;
+    }
 }
