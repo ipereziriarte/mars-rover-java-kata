@@ -1,6 +1,6 @@
 package com.blokura.data;
 
-import com.blokura.Rover;
+import com.blokura.model.Rover;
 
 public class OutPut {
 

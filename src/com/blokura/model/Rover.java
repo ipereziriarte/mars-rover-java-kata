@@ -1,4 +1,4 @@
-package com.blokura;
+package com.blokura.model;
 
 /**
  * Created by imanol on 19/02/2017.

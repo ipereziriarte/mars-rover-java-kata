@@ -1,9 +1,9 @@
 package com.blokura.command;
 
-import com.blokura.Coordinates;
-import com.blokura.Heading;
-import com.blokura.Plateau;
-import com.blokura.Rover;
+import com.blokura.model.Coordinates;
+import com.blokura.model.Heading;
+import com.blokura.model.Plateau;
+import com.blokura.model.Rover;
 
 public class MoveCommand implements RoverCommand {
 

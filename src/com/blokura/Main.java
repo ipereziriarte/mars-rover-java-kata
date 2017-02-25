@@ -7,6 +7,9 @@ import com.blokura.data.CommandFactory;
 import com.blokura.data.FileReader;
 import com.blokura.data.InputType;
 import com.blokura.data.OutPut;
+import com.blokura.model.Coordinates;
+import com.blokura.model.Plateau;
+import com.blokura.model.Rover;
 import com.blokura.parser.DeployParser;
 import com.blokura.parser.MovementParser;
 import com.blokura.parser.PlateauParser;
@@ -44,7 +47,7 @@ public class Main {
             for (String line : input) {
                 inputType = commandFactory.make(line);
                 if (inputType == InputType.PLATEAU) {
-                    plateau = new PlateauCreator().create(plateauParser.parse(line));
+                    plateau = plateauParser.parse(line);
                 } else if (inputType == InputType.DEPLOY_ZONE) {
                     coordinates = deployParser.parse(line);
                     coordinatesList.add(coordinates);

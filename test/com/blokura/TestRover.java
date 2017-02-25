@@ -1,5 +1,8 @@
 package com.blokura;
 
+import com.blokura.model.Rover;
+import com.blokura.model.TestCoordinates;
+
 public class TestRover {
 
     public static Rover givenARoverInA5x4PlateauAnd00NCoordinates() {

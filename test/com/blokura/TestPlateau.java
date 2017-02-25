@@ -1,5 +1,7 @@
 package com.blokura;
 
+import com.blokura.model.Plateau;
+
 public class TestPlateau {
 
     public static Plateau givenA5x4Plateau() {

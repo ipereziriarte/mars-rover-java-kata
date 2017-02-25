@@ -1,4 +1,4 @@
-package com.blokura;
+package com.blokura.model;
 
 /**
  * Created by imanol on 15/02/2017.
@@ -28,17 +28,47 @@ public class Plateau {
         return ORIGIN_Y <= y && y < height;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Plateau plateau = (Plateau) o;
+
+        if (width != plateau.width) {
+            return false;
+        }
+        return height == plateau.height;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = width;
+        result = 31 * result + height;
+        return result;
+    }
+
     public static class PlateauBuilder {
 
-        private int height = 0;
-        private int width = 0;
+        private int height = 1;
+        private int width = 1;
 
         public PlateauBuilder withHeight(final int height) {
+            if (height < 1) {
+                throw new IllegalArgumentException("Min height must be 1");
+            }
             this.height = height;
             return this;
         }
 
         public PlateauBuilder withWidth(final int width) {
+            if (width < 1) {
+                throw new IllegalArgumentException("Min width must be 1");
+            }
             this.width = width;
             return this;
         }

@@ -1,7 +1,7 @@
 package com.blokura.parser;
 
-import com.blokura.Coordinates;
-import com.blokura.Heading;
+import com.blokura.model.Coordinates;
+import com.blokura.model.Heading;
 
 public class DeployParser {
 

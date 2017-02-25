@@ -1,8 +1,8 @@
 package com.blokura.command;
 
-import com.blokura.Coordinates;
-import com.blokura.Heading;
-import com.blokura.Rover;
+import com.blokura.model.Coordinates;
+import com.blokura.model.Heading;
+import com.blokura.model.Rover;
 import com.blokura.TestRover;
 import org.junit.Test;
 

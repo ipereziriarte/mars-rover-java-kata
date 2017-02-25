@@ -1,4 +1,4 @@
-package com.blokura;
+package com.blokura.model;
 
 public class TestCoordinates {
 

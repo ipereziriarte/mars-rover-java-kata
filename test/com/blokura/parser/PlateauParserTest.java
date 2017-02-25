@@ -1,6 +1,6 @@
 package com.blokura.parser;
 
-import com.blokura.utils.Pair;
+import com.blokura.model.Plateau;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -43,12 +43,12 @@ public class PlateauParserTest {
     }
 
     @Test
-    public void parse_shouldReturnAPair_whenInputContainsDownCaseNumbers() {
+    public void parse_shouldReturnAPlateau_whenInputContainsDownCaseNumbers() {
         PlateauParser plateauParser = new PlateauParser();
+        Plateau expected = new Plateau(3, 5);
 
-        Pair<Integer, Integer> result = plateauParser.parse("3x5");
+        Plateau result = plateauParser.parse("3x5");
 
-        assertEquals(3, (int) result.getElement0());
-        assertEquals(5, (int) result.getElement1());
+        assertEquals(expected, result);
     }
 }

@@ -1,5 +1,7 @@
-package com.blokura;
+package com.blokura.model;
 
+import com.blokura.TestPlateau;
+import com.blokura.model.Plateau;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
