@@ -16,8 +16,6 @@ public class Main {
     private static final String DATA_PATH = "example.txt";
 
     public static void main(String[] args) {
-        RoverCommandParser roverCommandParser = new RoverCommandParser(new RoverCommandCollectionBuilder());
-
         String path;
         if (args.length == 1) {
             path = args[0];

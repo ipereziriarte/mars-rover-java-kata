@@ -40,9 +40,11 @@ The output for each rover should be its final coordinates and heading. Input and
 + Rover 2 position: 5 1 E  
 
 ##**Solution**
-This is WIP  
 No extra libraries are used
 + I started by doing an exploratory approach to the solution.
 + Follow SOLID and DRY principles
 + Use [Test Object Builder pattern](http://www.natpryce.com/articles/000714.html)
 + Use Command and State patterns
++ Run Main class, optionally you can pass a path to the input file.
++ If there's no input file, it will use example.txt file
++ RoverProcessor is the class responsible for process and run the commands
