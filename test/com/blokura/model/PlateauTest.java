@@ -19,7 +19,7 @@ public class PlateauTest {
     public void includes_shouldReturnTrue_whenCoordinatesAreTopMost() {
         Plateau plateau = TestPlateau.givenA5x4Plateau();
 
-        assertTrue(plateau.includes(4, 3));
+        assertTrue(plateau.includes(5, 4));
     }
 
     @Test
@@ -33,20 +33,20 @@ public class PlateauTest {
     public void includes_shouldReturnFalse_whenBothCoordinatesAreOutSide() {
         Plateau plateau = TestPlateau.givenA5x4Plateau();
 
-        assertFalse(plateau.includes(5, 4));
+        assertFalse(plateau.includes(6, 5));
     }
 
     @Test
     public void includes_shouldReturnFalse_whenWidthIsOutSide() {
         Plateau plateau = TestPlateau.givenA5x4Plateau();
 
-        assertFalse(plateau.includes(5, 3));
+        assertFalse(plateau.includes(6, 3));
     }
 
     @Test
     public void includes_shouldReturnFalse_whenHeightIsOutSide() {
         Plateau plateau = TestPlateau.givenA5x4Plateau();
 
-        assertFalse(plateau.includes(4, 4));
+        assertFalse(plateau.includes(4, 5));
     }
 }

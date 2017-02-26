@@ -21,11 +21,11 @@ public class Plateau {
     }
 
     private boolean isXInside(final int x) {
-        return ORIGIN_X <= x && x < width;
+        return ORIGIN_X <= x && x <= width;
     }
 
     private boolean isYInside(final int y) {
-        return ORIGIN_Y <= y && y < height;
+        return ORIGIN_Y <= y && y <= height;
     }
 
     @Override
