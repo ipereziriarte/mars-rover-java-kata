@@ -1,11 +1,9 @@
 package com.blokura.command.rovercommands;
 
-import com.blokura.command.rovercommands.RoverCommand;
-import com.blokura.command.rovercommands.TurnRightCommand;
+import com.blokura.TestRover;
 import com.blokura.model.Coordinates;
 import com.blokura.model.Heading;
 import com.blokura.model.Rover;
-import com.blokura.TestRover;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,7 +18,7 @@ public class TurnRightCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.S);
+        assert (roverCoordinates.getHeading()).equals(Heading.S);
         assertEquals(0, roverCoordinates.getX());
         assertEquals(0, roverCoordinates.getY());
     }
@@ -33,7 +31,7 @@ public class TurnRightCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.E);
+        assert (roverCoordinates.getHeading()).equals(Heading.E);
         assertEquals(0, roverCoordinates.getX());
         assertEquals(0, roverCoordinates.getY());
     }
@@ -46,7 +44,7 @@ public class TurnRightCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.N);
+        assert (roverCoordinates.getHeading()).equals(Heading.N);
         assertEquals(0, roverCoordinates.getX());
         assertEquals(0, roverCoordinates.getY());
     }
@@ -59,9 +57,8 @@ public class TurnRightCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.W);
+        assert (roverCoordinates.getHeading()).equals(Heading.W);
         assertEquals(0, roverCoordinates.getX());
         assertEquals(0, roverCoordinates.getY());
     }
-
 }

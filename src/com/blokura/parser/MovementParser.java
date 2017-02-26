@@ -8,7 +8,7 @@ public class MovementParser {
 
     public char[] parse(String input) {
         if (input.isEmpty()) {
-            return new char[]{};
+            return new char[] {};
         } else {
             return input.toUpperCase().toCharArray();
         }

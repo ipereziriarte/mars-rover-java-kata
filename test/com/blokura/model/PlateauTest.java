@@ -1,7 +1,6 @@
 package com.blokura.model;
 
 import com.blokura.TestPlateau;
-import com.blokura.model.Plateau;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -49,7 +48,5 @@ public class PlateauTest {
         Plateau plateau = TestPlateau.givenA5x4Plateau();
 
         assertFalse(plateau.includes(4, 4));
-
     }
-
 }

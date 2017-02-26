@@ -32,6 +32,7 @@ public class Rover {
     }
 
     public static class RoverBuilder {
+
         private int id;
         private Coordinates coordinates;
         private Plateau plateau;

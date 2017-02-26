@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     private static final String DATA_PATH = "example.txt";
 
     public static void main(String[] args) {
@@ -53,7 +54,6 @@ public class Main {
                 } else if (inputType == InputType.DEPLOY_ZONE) {
                     coordinates = deployParser.parse(line);
                     coordinatesList.add(coordinates);
-
                 } else if (inputType == InputType.MOVEMENT) {
                     List<RoverCommand> commands = roverCommandParser.parse(movementParser.parse(line));
                     commandList.add(commands);

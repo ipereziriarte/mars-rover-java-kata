@@ -3,6 +3,7 @@ package com.blokura.data;
 public class CommandFactory {
 
     public CommandFactory() {
+        //Empty used for injection
     }
 
     public InputType make(final String input) {

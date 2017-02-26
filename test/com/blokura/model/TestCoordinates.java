@@ -18,6 +18,10 @@ public class TestCoordinates {
         return new Coordinates(0, 0, Heading.E);
     }
 
+    public static Coordinates given12NCoordinates() {
+        return new Coordinates(1, 2, Heading.N);
+    }
+
     public static Coordinates given43ECoordinates() {
         return new Coordinates(4, 3, Heading.E);
     }

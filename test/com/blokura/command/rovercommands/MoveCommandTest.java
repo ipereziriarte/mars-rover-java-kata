@@ -1,11 +1,9 @@
 package com.blokura.command.rovercommands;
 
-import com.blokura.command.rovercommands.MoveCommand;
-import com.blokura.command.rovercommands.RoverCommand;
+import com.blokura.TestRover;
 import com.blokura.model.Coordinates;
 import com.blokura.model.Heading;
 import com.blokura.model.Rover;
-import com.blokura.TestRover;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -72,7 +70,7 @@ public class MoveCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.E);
+        assert (roverCoordinates.getHeading()).equals(Heading.E);
         assertEquals(4, roverCoordinates.getX());
         assertEquals(3, roverCoordinates.getY());
     }

@@ -52,4 +52,11 @@ public class TestRover {
             .withPlateau(TestPlateau.givenA5x4Plateau())
             .build();
     }
+
+    public static Rover givenARover1InA5x5PlateauAnd12NCoordinates() {
+        return new Rover.RoverBuilder().withCoordinates(TestCoordinates.given12NCoordinates())
+            .withPlateau(TestPlateau.givenA5x5Plateau())
+            .withId(1)
+            .build();
+    }
 }

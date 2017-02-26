@@ -20,7 +20,7 @@ public class RoverCommandParserTest {
         RoverCommandParser parser = new RoverCommandParser(new RoverCommandCollectionBuilder());
         char[] values = {};
 
-        assert(parser.parse(values)).isEmpty();
+        assert (parser.parse(values)).isEmpty();
     }
 
     @Test
@@ -28,7 +28,7 @@ public class RoverCommandParserTest {
         RoverCommandParser parser = new RoverCommandParser(new RoverCommandCollectionBuilder());
         char[] values = {'J', 'x'};
 
-        assert(parser.parse(values)).isEmpty();
+        assert (parser.parse(values)).isEmpty();
     }
 
     @Test
@@ -43,5 +43,4 @@ public class RoverCommandParserTest {
         List<RoverCommand> result = parser.parse(values);
         assertThat(result, is(expected));
     }
-
 }
