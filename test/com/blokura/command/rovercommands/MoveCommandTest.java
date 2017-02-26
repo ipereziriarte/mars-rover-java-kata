@@ -64,28 +64,28 @@ public class MoveCommandTest {
 
     @Test
     public void shouldStayStill_whenRoverIsHeadingEastInTopRightCorner() {
-        Rover rover = TestRover.givenARoverInA5x4PlateauAnd43ECoordinates();
+        Rover rover = TestRover.givenARoverInA5x4PlateauAnd54ECoordinates();
         RoverCommand command = new MoveCommand();
 
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
         assert (roverCoordinates.getHeading()).equals(Heading.E);
-        assertEquals(4, roverCoordinates.getX());
-        assertEquals(3, roverCoordinates.getY());
+        assertEquals(5, roverCoordinates.getX());
+        assertEquals(4, roverCoordinates.getY());
     }
 
     @Test
     public void shouldStayStill_whenRoverIsHeadingNorthInTopRightCorner() {
-        Rover rover = TestRover.givenARoverInA5x4PlateauAnd43NCoordinates();
+        Rover rover = TestRover.givenARoverInA5x4PlateauAnd54NCoordinates();
         RoverCommand command = new MoveCommand();
 
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
         assert(roverCoordinates.getHeading()).equals(Heading.N);
-        assertEquals(4, roverCoordinates.getX());
-        assertEquals(3, roverCoordinates.getY());
+        assertEquals(5, roverCoordinates.getX());
+        assertEquals(4, roverCoordinates.getY());
     }
 
     @Test
@@ -109,9 +109,8 @@ public class MoveCommandTest {
         command.execute(rover);
         Coordinates roverCoordinates = rover.getCoordinates();
 
-        assert(roverCoordinates.getHeading()).equals(Heading.W);
+        assert (roverCoordinates.getHeading()).equals(Heading.W);
         assertEquals(3, roverCoordinates.getX());
         assertEquals(3, roverCoordinates.getY());
     }
-
 }

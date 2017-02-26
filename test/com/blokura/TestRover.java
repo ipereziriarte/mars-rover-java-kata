@@ -29,8 +29,8 @@ public class TestRover {
             .build();
     }
 
-    public static Rover givenARoverInA5x4PlateauAnd43ECoordinates() {
-        return new Rover.RoverBuilder().withCoordinates(TestCoordinates.given43ECoordinates())
+    public static Rover givenARoverInA5x4PlateauAnd54ECoordinates() {
+        return new Rover.RoverBuilder().withCoordinates(TestCoordinates.given54ECoordinates())
             .withPlateau(TestPlateau.givenA5x4Plateau())
             .build();
     }
@@ -47,8 +47,8 @@ public class TestRover {
             .build();
     }
 
-    public static Rover givenARoverInA5x4PlateauAnd43NCoordinates() {
-        return new Rover.RoverBuilder().withCoordinates(TestCoordinates.given43NCoordinates())
+    public static Rover givenARoverInA5x4PlateauAnd54NCoordinates() {
+        return new Rover.RoverBuilder().withCoordinates(TestCoordinates.given54NCoordinates())
             .withPlateau(TestPlateau.givenA5x4Plateau())
             .build();
     }

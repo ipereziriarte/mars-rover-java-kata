@@ -26,8 +26,16 @@ public class TestCoordinates {
         return new Coordinates(4, 3, Heading.E);
     }
 
+    public static Coordinates given54ECoordinates() {
+        return new Coordinates(5, 4, Heading.E);
+    }
+
     public static Coordinates given43NCoordinates() {
         return new Coordinates(4, 3, Heading.N);
+    }
+
+    public static Coordinates given54NCoordinates() {
+        return new Coordinates(5, 4, Heading.N);
     }
 
     public static Coordinates given43SCoordinates() {
